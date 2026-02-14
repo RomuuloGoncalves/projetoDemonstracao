@@ -1,0 +1,524 @@
+/* ============================================
+   VANESSA MORELLI — Admin Panel Styles
+   ============================================ */
+
+/* ─── Admin Layout ─── */
+.admin-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+}
+
+/* ─── Sidebar ─── */
+.admin-sidebar {
+    background: var(--color-dark);
+    color: var(--color-white);
+    padding: var(--space-2xl) 0;
+    position: fixed;
+    width: 260px;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: var(--z-sticky);
+}
+
+.admin-sidebar__logo {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
+    color: var(--color-white);
+    padding: 0 var(--space-xl);
+    margin-bottom: var(--space-xs);
+}
+
+.admin-sidebar__subtitle {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-widest);
+    color: var(--color-gold);
+    padding: 0 var(--space-xl);
+    margin-bottom: var(--space-2xl);
+}
+
+.admin-sidebar__nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-sidebar__link {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    padding: var(--space-sm) var(--space-xl);
+    font-size: var(--fs-small);
+    color: var(--color-gray-400);
+    transition: all var(--transition-fast);
+    border-left: 3px solid transparent;
+}
+
+.admin-sidebar__link:hover {
+    color: var(--color-white);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.admin-sidebar__link.active {
+    color: var(--color-gold-light);
+    background: rgba(201, 169, 110, 0.08);
+    border-left-color: var(--color-gold);
+}
+
+.admin-sidebar__link svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+}
+
+.admin-sidebar__divider {
+    height: 1px;
+    background: rgba(255, 255, 255, 0.06);
+    margin: var(--space-lg) var(--space-xl);
+}
+
+.admin-sidebar__back {
+    margin-top: auto;
+    padding: var(--space-md) var(--space-xl);
+    font-size: var(--fs-xs);
+    color: var(--color-gray-500);
+    display: flex;
+    align-items: center;
+    gap: var(--space-xs);
+}
+
+.admin-sidebar__back:hover {
+    color: var(--color-gold);
+}
+
+/* ─── Main Content ─── */
+.admin-main {
+    grid-column: 2;
+    padding: var(--space-2xl) var(--space-3xl);
+    background: var(--color-gray-100);
+    min-height: 100vh;
+}
+
+.admin-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--space-2xl);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.admin-header__title {
+    font-size: var(--fs-h2);
+    color: var(--color-text-heading);
+}
+
+.admin-header__actions {
+    display: flex;
+    gap: var(--space-md);
+}
+
+/* ─── Dashboard Cards ─── */
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-2xl);
+}
+
+.dashboard-card {
+    background: var(--color-white);
+    padding: var(--space-xl);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-fast);
+}
+
+.dashboard-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.dashboard-card__label {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wider);
+    color: var(--color-gray-500);
+    margin-bottom: var(--space-sm);
+}
+
+.dashboard-card__value {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h2);
+    color: var(--color-navy);
+    margin-bottom: var(--space-2xs);
+}
+
+.dashboard-card__change {
+    font-size: var(--fs-xs);
+    color: var(--color-success);
+}
+
+.dashboard-card__change--negative {
+    color: var(--color-danger);
+}
+
+.dashboard-card__icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: var(--space-md);
+}
+
+.dashboard-card__icon--gold {
+    background: rgba(201, 169, 110, 0.1);
+    color: var(--color-gold);
+}
+
+.dashboard-card__icon--navy {
+    background: rgba(27, 42, 74, 0.08);
+    color: var(--color-navy);
+}
+
+.dashboard-card__icon--success {
+    background: rgba(74, 124, 89, 0.08);
+    color: var(--color-success);
+}
+
+.dashboard-card__icon--danger {
+    background: rgba(155, 59, 59, 0.08);
+    color: var(--color-danger);
+}
+
+/* ─── Admin Tables ─── */
+.admin-table-wrapper {
+    background: var(--color-white);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.admin-table-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--space-lg) var(--space-xl);
+    border-bottom: var(--border-thin);
+    flex-wrap: wrap;
+    gap: var(--space-md);
+}
+
+.admin-table-header__title {
+    font-family: var(--font-heading);
+    font-size: var(--fs-h4);
+}
+
+.admin-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.admin-table th {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wider);
+    color: var(--color-gray-500);
+    font-weight: var(--fw-medium);
+    padding: var(--space-md) var(--space-lg);
+    text-align: left;
+    border-bottom: var(--border-thin);
+    background: var(--color-gray-100);
+}
+
+.admin-table td {
+    padding: var(--space-md) var(--space-lg);
+    border-bottom: var(--border-thin);
+    font-size: var(--fs-small);
+    color: var(--color-charcoal);
+    vertical-align: middle;
+}
+
+.admin-table tr:last-child td {
+    border-bottom: none;
+}
+
+.admin-table tr:hover td {
+    background: var(--color-gray-100);
+}
+
+.admin-table__product-cell {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.admin-table__product-img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    background: var(--color-cream);
+    flex-shrink: 0;
+}
+
+.admin-table__product-name {
+    font-weight: var(--fw-medium);
+}
+
+.admin-table__actions {
+    display: flex;
+    gap: var(--space-xs);
+}
+
+.admin-table__action-btn {
+    padding: var(--space-2xs) var(--space-sm);
+    font-size: var(--fs-xs);
+    border: 1px solid var(--color-border);
+    color: var(--color-gray-600);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border-radius: var(--radius-sm);
+    background: var(--color-white);
+}
+
+.admin-table__action-btn:hover {
+    border-color: var(--color-gold);
+    color: var(--color-gold);
+}
+
+.admin-table__action-btn--danger:hover {
+    border-color: var(--color-danger);
+    color: var(--color-danger);
+}
+
+/* ─── Status Badges ─── */
+.status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2xs);
+    padding: var(--space-2xs) var(--space-sm);
+    font-size: var(--fs-xs);
+    border-radius: var(--radius-xl);
+    font-weight: var(--fw-medium);
+}
+
+.status-badge__dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+}
+
+.status-badge--active {
+    background: rgba(74, 124, 89, 0.1);
+    color: var(--color-success);
+}
+
+.status-badge--active .status-badge__dot {
+    background: var(--color-success);
+}
+
+.status-badge--low {
+    background: rgba(201, 169, 110, 0.1);
+    color: var(--color-gold-dark);
+}
+
+.status-badge--low .status-badge__dot {
+    background: var(--color-gold);
+}
+
+.status-badge--out {
+    background: rgba(155, 59, 59, 0.1);
+    color: var(--color-danger);
+}
+
+.status-badge--out .status-badge__dot {
+    background: var(--color-danger);
+}
+
+.status-badge--pending {
+    background: rgba(74, 111, 140, 0.1);
+    color: var(--color-info);
+}
+
+.status-badge--pending .status-badge__dot {
+    background: var(--color-info);
+}
+
+.status-badge--completed {
+    background: rgba(74, 124, 89, 0.1);
+    color: var(--color-success);
+}
+
+.status-badge--completed .status-badge__dot {
+    background: var(--color-success);
+}
+
+/* ─── Admin Forms ─── */
+.admin-form {
+    display: grid;
+    gap: var(--space-lg);
+}
+
+.admin-form--two-cols {
+    grid-template-columns: 1fr 1fr;
+}
+
+.admin-form__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.admin-form__group--full {
+    grid-column: 1 / -1;
+}
+
+.admin-form__label {
+    font-size: var(--fs-xs);
+    text-transform: uppercase;
+    letter-spacing: var(--ls-wider);
+    color: var(--color-gray-600);
+    font-weight: var(--fw-medium);
+}
+
+.admin-form__input,
+.admin-form__select,
+.admin-form__textarea {
+    padding: var(--space-sm) var(--space-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    font-size: var(--fs-body);
+    color: var(--color-charcoal);
+    background: var(--color-white);
+    transition: border-color var(--transition-fast);
+}
+
+.admin-form__input:focus,
+.admin-form__select:focus,
+.admin-form__textarea:focus {
+    border-color: var(--color-gold);
+    box-shadow: 0 0 0 3px rgba(201, 169, 110, 0.1);
+}
+
+.admin-form__textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.admin-form__actions {
+    display: flex;
+    gap: var(--space-md);
+    justify-content: flex-end;
+    grid-column: 1 / -1;
+}
+
+/* ─── Admin Modal ─── */
+.admin-modal {
+    max-width: 600px;
+}
+
+.admin-modal .modal__details {
+    padding: var(--space-2xl);
+}
+
+.admin-modal__title {
+    font-size: var(--fs-h3);
+    margin-bottom: var(--space-xl);
+}
+
+/* ─── Mobile Toggle ─── */
+.admin-mobile-toggle {
+    display: none;
+    position: fixed;
+    bottom: var(--space-lg);
+    right: var(--space-lg);
+    width: 50px;
+    height: 50px;
+    background: var(--color-navy);
+    color: var(--color-white);
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-lg);
+    z-index: var(--z-overlay);
+    cursor: pointer;
+    font-size: 1.25rem;
+}
+
+/* ─── Admin Responsive ─── */
+@media (max-width: 1024px) {
+    .admin-form--two-cols {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-main {
+        padding: var(--space-xl);
+    }
+}
+
+@media (max-width: 768px) {
+    .admin-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-sidebar {
+        position: fixed;
+        left: -260px;
+        transition: left var(--transition-base);
+        z-index: var(--z-modal);
+    }
+
+    .admin-sidebar.open {
+        left: 0;
+    }
+
+    .admin-main {
+        grid-column: 1;
+        padding: var(--space-lg);
+    }
+
+    .admin-mobile-toggle {
+        display: flex;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-table {
+        font-size: var(--fs-xs);
+    }
+
+    .admin-table th,
+    .admin-table td {
+        padding: var(--space-sm);
+    }
+
+    .admin-table__product-img {
+        display: none;
+    }
+
+    .admin-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ─── Admin Sidebar Overlay (Mobile) ─── */
+.admin-sidebar-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: calc(var(--z-modal) - 1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all var(--transition-base);
+}
+
+.admin-sidebar-overlay.open {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,129 @@
+/* ============================================
+   VANESSA MORELLI — Design System Variables
+   Luxury Interior Studio
+   ============================================ */
+
+:root {
+  /* ─── Color Palette ─── */
+  --color-cream: #F5F1EB;
+  --color-ivory: #FAFAF7;
+  --color-warm-white: #F8F6F2;
+  --color-pearl: #EDE8E0;
+  --color-sand: #D4CBBD;
+  --color-navy: #1B2A4A;
+  --color-navy-light: #2A3D62;
+  --color-charcoal: #2C2C2C;
+  --color-dark: #1A1A1A;
+  --color-gold: #C9A96E;
+  --color-gold-light: #D4BA85;
+  --color-gold-dark: #A88B52;
+  --color-rose: #B5838D;
+  --color-sage: #8B9D83;
+  --color-white: #FFFFFF;
+  --color-black: #000000;
+  --color-gray-100: #F7F7F7;
+  --color-gray-200: #EBEBEB;
+  --color-gray-300: #D1D1D1;
+  --color-gray-400: #A8A8A8;
+  --color-gray-500: #787878;
+  --color-gray-600: #555555;
+  --color-gray-700: #333333;
+
+  /* ─── Semantic Colors ─── */
+  --color-bg-primary: var(--color-ivory);
+  --color-bg-secondary: var(--color-cream);
+  --color-bg-dark: var(--color-navy);
+  --color-bg-card: var(--color-white);
+  --color-text-primary: var(--color-charcoal);
+  --color-text-secondary: var(--color-gray-500);
+  --color-text-heading: var(--color-dark);
+  --color-text-light: var(--color-white);
+  --color-text-accent: var(--color-gold);
+  --color-border: var(--color-gray-200);
+  --color-border-dark: var(--color-gray-300);
+
+  /* Status */
+  --color-success: #4A7C59;
+  --color-warning: #C9A96E;
+  --color-danger: #9B3B3B;
+  --color-info: #4A6F8C;
+
+  /* ─── Typography ─── */
+  --font-heading: 'Playfair Display', 'Georgia', serif;
+  --font-body: 'Inter', 'Helvetica Neue', sans-serif;
+  --font-accent: 'Cormorant Garamond', 'Georgia', serif;
+
+  --fs-display: clamp(3rem, 6vw, 5.5rem);
+  --fs-h1: clamp(2.25rem, 4vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.25rem, 2vw, 1.75rem);
+  --fs-h4: clamp(1.1rem, 1.5vw, 1.25rem);
+  --fs-body: clamp(0.9rem, 1vw, 1rem);
+  --fs-body-lg: clamp(1rem, 1.2vw, 1.125rem);
+  --fs-small: clamp(0.75rem, 0.9vw, 0.875rem);
+  --fs-xs: 0.75rem;
+  --fs-nav: 0.8125rem;
+
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  --lh-tight: 1.15;
+  --lh-heading: 1.25;
+  --lh-body: 1.7;
+
+  --ls-wide: 0.15em;
+  --ls-wider: 0.25em;
+  --ls-widest: 0.35em;
+
+  /* ─── Spacing ─── */
+  --space-2xs: 0.25rem;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  --space-4xl: 6rem;
+  --space-5xl: 8rem;
+  --space-section: clamp(4rem, 8vw, 8rem);
+
+  /* ─── Layout ─── */
+  --container-max: 1400px;
+  --container-narrow: 900px;
+  --container-wide: 1600px;
+  --container-padding: clamp(1.25rem, 4vw, 3rem);
+
+  /* ─── Borders ─── */
+  --radius-sm: 2px;
+  --radius-md: 4px;
+  --radius-lg: 8px;
+  --radius-xl: 12px;
+  --border-thin: 1px solid var(--color-border);
+  --border-gold: 1px solid var(--color-gold);
+
+  /* ─── Shadows ─── */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.06);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.08);
+  --shadow-xl: 0 16px 50px rgba(0, 0, 0, 0.1);
+  --shadow-gold: 0 4px 20px rgba(201, 169, 110, 0.15);
+
+  /* ─── Transitions ─── */
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  --transition-slower: 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+  /* ─── Z-index ─── */
+  --z-base: 1;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-header: 500;
+  --z-overlay: 900;
+  --z-modal: 1000;
+  --z-toast: 1100;
+}

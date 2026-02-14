@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" fill="none">
+  <rect width="400" height="500" fill="#F5F1EB"/>
+  <rect x="0.5" y="0.5" width="399" height="499" stroke="#D4CBBD" stroke-width="1"/>
+  <line x1="0" y1="0" x2="400" y2="500" stroke="#E8E2D8" stroke-width="0.5"/>
+  <line x1="400" y1="0" x2="0" y2="500" stroke="#E8E2D8" stroke-width="0.5"/>
+  <rect x="120" y="180" width="160" height="140" rx="2" fill="none" stroke="#C9A96E" stroke-width="1"/>
+  <path d="M160 260 L180 230 L200 250 L230 210 L260 260" stroke="#C9A96E" stroke-width="1" fill="none" stroke-linejoin="round"/>
+  <circle cx="175" cy="215" r="10" fill="none" stroke="#C9A96E" stroke-width="1"/>
+  <text x="200" y="355" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#C9A96E" letter-spacing="3">SEU PRODUTO</text>
+  <text x="200" y="378" text-anchor="middle" font-family="Georgia, serif" font-size="14" fill="#C9A96E" letter-spacing="3">AQUI</text>
+  <line x1="150" y1="395" x2="250" y2="395" stroke="#C9A96E" stroke-width="0.5"/>
+</svg>

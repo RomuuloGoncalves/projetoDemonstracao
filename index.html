@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vanessa Morelli — Estúdio de Interiores de Luxo. Design exclusivo, peças artesanais e ambientes que refletem sofisticação e elegância atemporal.">
+  <meta name="keywords" content="design de interiores, luxo, mobiliário, decoração, Vanessa Morelli">
+  <title>Vanessa Morelli — Estúdio de Interiores</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/variables.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/components.css">
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><text x='4' y='24' font-family='serif' font-size='24' fill='%23C9A96E'>V</text></svg>">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HEADER / NAVIGATION                    -->
+  <!-- ═══════════════════════════════════════ -->
+  <header class="header header--hero" id="header">
+    <div class="container header__inner">
+      <a href="#hero" class="header__logo">Vanessa Morelli</a>
+
+      <nav class="header__nav">
+        <a href="#hero" class="header__nav-link active">Início</a>
+        <a href="#collections" class="header__nav-link">Coleções</a>
+        <a href="#shop" class="header__nav-link">Loja</a>
+        <a href="#about" class="header__nav-link">Sobre</a>
+        <a href="#contact" class="header__nav-link">Contato</a>
+      </nav>
+
+      <div class="header__actions">
+        <a href="admin.html" class="header__admin-link">Admin</a>
+      </div>
+
+      <button class="menu-toggle" aria-label="Menu" id="menuToggle">
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+        <span class="menu-toggle__bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Navigation -->
+  <div class="mobile-nav__overlay" id="mobileNavOverlay"></div>
+  <nav class="mobile-nav" id="mobileNav">
+    <a href="#hero" class="mobile-nav__link">Início</a>
+    <a href="#collections" class="mobile-nav__link">Coleções</a>
+    <a href="#shop" class="mobile-nav__link">Loja</a>
+    <a href="#about" class="mobile-nav__link">Sobre</a>
+    <a href="#contact" class="mobile-nav__link">Contato</a>
+    <div style="margin-top: var(--space-xl); padding-top: var(--space-xl); border-top: 1px solid var(--color-border);">
+      <a href="admin.html" class="mobile-nav__link" style="font-size: var(--fs-small); color: var(--color-gray-500);">Painel Admin</a>
+    </div>
+    <div style="margin-top: var(--space-lg);" id="whatsappStatus"></div>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- HERO SECTION                           -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero__bg"></div>
+    <div class="hero__content">
+      <p class="hero__subtitle">Estúdio de Interiores</p>
+      <h1 class="hero__title">A Arte de<br>Viver com Elegância</h1>
+      <p class="hero__description">Criamos ambientes exclusivos que traduzem sofisticação, conforto e a essência de cada cliente em peças e espaços atemporais.</p>
+      <div class="hero__actions">
+        <button class="btn btn--white btn--lg" onclick="navigateToCollections()">Explorar Coleções</button>
+        <button class="btn btn--ghost btn--lg" onclick="navigateToShop()">Visitar a Loja</button>
+      </div>
+    </div>
+    <div class="hero__scroll">
+      <span>Scroll</span>
+      <div class="hero__scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- COLLECTIONS / SHOWCASE                 -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="collections" id="collections">
+    <div class="container">
+      <div class="reveal">
+        <p class="section-subtitle">Seleção Curada</p>
+        <h2 class="section-title">Coleções em Destaque</h2>
+      </div>
+      <div class="collections__grid" id="collectionsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- EDITORIAL BANNER                       -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="editorial">
+    <div class="container">
+      <div class="editorial__content reveal">
+        <p class="editorial__quote">"Cada espaço conta uma história. Nossa missão é transformar ambientes em narrativas de requinte e personalidade."</p>
+        <p class="editorial__author">— Vanessa Morelli</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- E-COMMERCE SHOP                        -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="shop" id="shop">
+    <div class="container">
+      <div class="shop__header reveal">
+        <div>
+          <p class="section-subtitle">Peças Selecionadas</p>
+          <h2 class="section-title">A Loja</h2>
+        </div>
+        <div class="shop__filters" id="shopFilters">
+          <!-- Populated by JS -->
+        </div>
+      </div>
+      <div class="products-grid" id="productsGrid">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- ABOUT                                  -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about__grid">
+        <div class="about__image reveal-left"></div>
+        <div class="about__text reveal-right">
+          <p class="section-subtitle">Nossa História</p>
+          <h2 class="section-title">Sobre o Estúdio</h2>
+          <p>O Estúdio Vanessa Morelli nasceu da paixão por transformar espaços em experiências únicas. Cada projeto é conduzido com atenção meticulosa aos detalhes, onde a funcionalidade encontra a beleza em sua forma mais pura.</p>
+          <p>Trabalhamos com os mais refinados materiais e artesãos para criar ambientes que transcendem tendências — espaços que são, em essência, atemporais.</p>
+          <div class="about__features">
+            <div class="reveal stagger-1">
+              <div class="about__feature-number">150+</div>
+              <div class="about__feature-label">Projetos Realizados</div>
+            </div>
+            <div class="reveal stagger-2">
+              <div class="about__feature-number">12</div>
+              <div class="about__feature-label">Anos de Experiência</div>
+            </div>
+            <div class="reveal stagger-3">
+              <div class="about__feature-number">40+</div>
+              <div class="about__feature-label">Marcas Parceiras</div>
+            </div>
+            <div class="reveal stagger-4">
+              <div class="about__feature-number">98%</div>
+              <div class="about__feature-label">Clientes Satisfeitos</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- CONTACT                                -->
+  <!-- ═══════════════════════════════════════ -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="contact__grid">
+        <div class="reveal-left">
+          <p class="section-subtitle">Fale Conosco</p>
+          <h2 class="section-title">Contato</h2>
+          <div class="contact__info">
+            <div class="contact__item">
+              <span class="contact__item-label">Atendimento</span>
+              <span class="contact__item-value">Seg — Sex, 9h às 18h</span>
+            </div>
+            <div class="contact__item">
+              <span class="contact__item-label">E-mail</span>
+              <span class="contact__item-value">contato@vanessamorelli.com.br</span>
+            </div>
+            <div class="contact__item">
+              <span class="contact__item-label">Showroom</span>
+              <span class="contact__item-value">Rua Oscar Freire, 1200<br>Jardins — São Paulo, SP</span>
+            </div>
+            <div class="contact__item">
+              <span class="contact__item-label">WhatsApp</span>
+              <span class="contact__item-value" id="contactWhatsApp">
+                <a href="javascript:Ecommerce.showWhatsAppConfig()" style="color: var(--color-gold);">Configurar número →</a>
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="reveal-right">
+          <form class="contact__form" onsubmit="event.preventDefault(); showToast('Mensagem enviada! (demonstração)');">
+            <div class="form-group">
+              <label for="contactName">Nome</label>
+              <input type="text" id="contactName" placeholder="Seu nome completo">
+            </div>
+            <div class="form-group">
+              <label for="contactEmail">E-mail</label>
+              <input type="email" id="contactEmail" placeholder="seu@email.com">
+            </div>
+            <div class="form-group">
+              <label for="contactSubject">Assunto</label>
+              <input type="text" id="contactSubject" placeholder="Como podemos ajudar?">
+            </div>
+            <div class="form-group">
+              <label for="contactMessage">Mensagem</label>
+              <textarea id="contactMessage" placeholder="Conte-nos sobre seu projeto..."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--lg">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- FOOTER                                 -->
+  <!-- ═══════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div>
+          <h3 class="footer__brand-name">Vanessa Morelli</h3>
+          <p class="footer__brand-desc">Estúdio de Interiores de Luxo. Criando espaços atemporais com elegância e sofisticação desde 2014.</p>
+        </div>
+        <div>
+          <h4 class="footer__title">Navegação</h4>
+          <a href="#hero" class="footer__link">Início</a>
+          <a href="#collections" class="footer__link">Coleções</a>
+          <a href="#shop" class="footer__link">Loja</a>
+          <a href="#about" class="footer__link">Sobre</a>
+          <a href="#contact" class="footer__link">Contato</a>
+        </div>
+        <div>
+          <h4 class="footer__title">Serviços</h4>
+          <a href="#" class="footer__link">Design de Interiores</a>
+          <a href="#" class="footer__link">Consultoria</a>
+          <a href="#" class="footer__link">Personal Shopping</a>
+          <a href="#" class="footer__link">Projetos Corporativos</a>
+        </div>
+        <div>
+          <h4 class="footer__title">Legal</h4>
+          <a href="#" class="footer__link">Política de Privacidade</a>
+          <a href="#" class="footer__link">Termos de Uso</a>
+          <a href="#" class="footer__link">Trocas e Devoluções</a>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 Vanessa Morelli. Todos os direitos reservados.</p>
+        <div class="footer__social">
+          <a href="#" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-label="Pinterest">Pinterest</a>
+          <a href="#" aria-label="LinkedIn">LinkedIn</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ═══════════════════════════════════════ -->
+  <!-- MODALS                                 -->
+  <!-- ═══════════════════════════════════════ -->
+
+  <!-- Product Detail Modal -->
+  <div class="modal-overlay" id="productModal">
+    <div class="modal">
+      <button class="modal__close" onclick="Ecommerce.closeProductDetail()">&times;</button>
+      <div class="modal__content">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Config Modal -->
+  <div class="modal-overlay" id="whatsappConfigModal">
+    <div class="modal admin-modal">
+      <button class="modal__close" onclick="Ecommerce.closeWhatsAppConfig()">&times;</button>
+      <div class="modal__details whatsapp-config">
+        <h3 class="whatsapp-config__title">Configurar WhatsApp</h3>
+        <p style="color: var(--color-gray-500); margin-bottom: var(--space-lg);">
+          Insira o número de WhatsApp com código do país (ex: 5511999999999) para receber os pedidos dos clientes.
+        </p>
+        <div class="whatsapp-config__form">
+          <div class="form-group">
+            <label for="whatsappNumberInput">Número do WhatsApp</label>
+            <input type="tel" id="whatsappNumberInput" class="whatsapp-config__input" placeholder="5511999999999" style="border: 1px solid var(--color-border); padding: var(--space-md);">
+          </div>
+          <button class="btn btn--gold btn--lg" onclick="Ecommerce.saveWhatsAppNumber()" style="width: 100%;">
+            Salvar Número
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+
+  <!-- Scripts -->
+  <script src="js/data.js"></script>
+  <script src="js/store.js"></script>
+  <script src="js/ecommerce.js"></script>
+  <script src="js/app.js"></script>
+
+</body>
+</html>
